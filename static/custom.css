@@ -1,0 +1,141 @@
+/* NODE Aesthetic Styling */
+:root {
+    --node-bg-primary: #0b0b0b;
+    --node-bg-secondary: #1a1a1a;
+    --node-accent: #8a2be2;
+    --node-accent-hover: #9b3df3;
+    --node-text-primary: #e0e0e0;
+    --node-text-secondary: #b0b0b0;
+    --node-border: #2a2a2a;
+    --node-success: #00ff88;
+    --node-warning: #ffaa00;
+    --node-error: #ff0044;
+}
+
+/* Base styling */
+.stApp {
+    background-color: var(--node-bg-primary);
+    color: var(--node-text-primary);
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', monospace;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--node-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Buttons */
+.stButton > button {
+    background: transparent;
+    border: 1px solid var(--node-accent);
+    color: var(--node-text-primary);
+    border-radius: 0;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stButton > button:hover {
+    background: var(--node-accent);
+    color: var(--node-bg-primary);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Input fields */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div > select {
+    background-color: var(--node-bg-secondary);
+    border: 1px solid var(--node-border);
+    color: var(--node-text-primary);
+    border-radius: 0;
+    font-family: inherit;
+}
+
+/* Data frames */
+.stDataFrame {
+    border: 1px solid var(--node-border);
+}
+
+/* Metrics */
+[data-testid="metric-container"] {
+    background-color: var(--node-bg-secondary);
+    border: 1px solid var(--node-accent);
+    padding: 1rem;
+    border-radius: 0;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: var(--node-bg-secondary);
+    border-right: 1px solid var(--node-accent);
+}
+
+/* Code blocks */
+.stCodeBlock {
+    background-color: var(--node-bg-secondary) !important;
+    border: 1px solid var(--node-border);
+    border-radius: 0;
+}
+
+/* Alerts */
+.stAlert {
+    background-color: var(--node-bg-secondary);
+    border: 1px solid var(--node-accent);
+    border-radius: 0;
+}
+
+/* Progress bars */
+.stProgress > div > div > div {
+    background-color: var(--node-accent);
+}
+
+/* Custom components */
+.node-card {
+    background-color: var(--node-bg-secondary);
+    border: 1px solid var(--node-border);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.node-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--node-accent);
+}
+
+.node-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.node-status.success {
+    background-color: var(--node-success);
+    color: var(--node-bg-primary);
+}
+
+.node-status.warning {
+    background-color: var(--node-warning);
+    color: var(--node-bg-primary);
+}
+
+.node-status.error {
+    background-color: var(--node-error);
+    color: var(--node-bg-primary);
+}
